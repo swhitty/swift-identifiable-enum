@@ -1,4 +1,4 @@
-// swift-tools-version:6.1
+// swift-tools-version:6.0
 
 import PackageDescription
 import CompilerPluginSupport
@@ -15,7 +15,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/swiftlang/swift-syntax", "510.0.0"..<"602.0.0")
+        .package(url: "https://github.com/swiftlang/swift-syntax", "510.0.0"..<"603.0.0")
     ],
     targets: [
         .target(

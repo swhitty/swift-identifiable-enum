@@ -1,6 +1,6 @@
-[![Build](https://github.com/swhitty/identifiable-macro/actions/workflows/build.yml/badge.svg)](https://github.com/swhitty/identifiable-macro/actions/workflows/build.yml)
-[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswhitty%2Fidentifiable-macro%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/swhitty/identifiable-macro)
-[![Swift 6.1](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswhitty%2Fidentifiable-macro%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/swhitty/identifiable-macro)
+[![Build](https://github.com/swhitty/identifiable-macro/actions/workflows/build.yml/badge.svg)](https://github.com/swhitty/swift-identifiable-enum/actions/workflows/build.yml)
+[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswhitty%2Fswift-identifiable-enum%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/swhitty/swift-identifiable-enum)
+[![Swift 6.1](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswhitty%2Fswift-identifiable-enum%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/swhitty/swift-identifiable-enum)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
 
 # Introduction

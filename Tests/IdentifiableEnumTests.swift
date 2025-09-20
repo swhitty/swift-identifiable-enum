@@ -31,11 +31,12 @@
 
 import Foundation
 import IdentifiableEnum
-import XCTest
+import Testing
 
-final class IdentifiableMacroTests: XCTestCase {
+struct IdentifiableMacroTests {
 
-    func testDefaults() {
+    @Test
+    func defaults() {
         let items: [ItemA] = [
             .foo(Foo(id: 10, title: "Fish")),
             .bar(Bar(id: "chips", title: "shrimp")),
@@ -43,13 +44,13 @@ final class IdentifiableMacroTests: XCTestCase {
             .zut(.distantFuture)
         ]
 
-        XCTAssertEqual(
-            items.map(\.id),
-            [.foo(10), .bar("chips"), .baz, .zut(.distantFuture)]
+        #expect(
+            items.map(\.id) == [.foo(10), .bar("chips"), .baz, .zut(.distantFuture)]
         )
     }
 
-    func testIDKeyPath() {
+    @Test
+    func idKeyPath() {
         let items: [ItemB] = [
             .foo(Foo(id: 5), 100),
             .bar(Bar(id: "6"), 200),
@@ -58,9 +59,8 @@ final class IdentifiableMacroTests: XCTestCase {
             .zut(9, "Fish")
         ]
 
-        XCTAssertEqual(
-            items.map(\.id),
-            [
+        #expect(
+            items.map(\.id) == [
                 .foo(100),
                 .bar("6"),
                 .baz,
@@ -69,9 +69,8 @@ final class IdentifiableMacroTests: XCTestCase {
             ]
         )
 
-        XCTAssertEqual(
-            items.map(\.id.description),
-            [
+        #expect(
+            items.map(\.id.description) == [
                 "foo(100)",
                 "bar(6)",
                 "baz",
@@ -81,16 +80,16 @@ final class IdentifiableMacroTests: XCTestCase {
         )
     }
 
-    func testIDWithRedundantSelf() {
+    @Test
+    func idWithRedundantSelf() {
         let items: [ItemC] = [
             .foo(Foo(title: "Fish")),
             .bar,
             .foobar(FooBar(bar: Bar(title: "Chips")))
         ]
 
-        XCTAssertEqual(
-            items.map(\.id),
-            [
+        #expect(
+            items.map(\.id) == [
                 .foo,
                 .bar,
                 .foobar(Bar(title: "Chips"))
@@ -98,16 +97,16 @@ final class IdentifiableMacroTests: XCTestCase {
         )
     }
 
-    func testIDWithSelf() {
+    @Test
+    func idWithSelf() {
         let items: [ItemD] = [
             .foo(Foo(title: "Fish")),
             .bar(Bar(title: "Chips")),
             .foobar(Foo(title: "Shrimp"), Bar(title: "MusyPeas"))
         ]
 
-        XCTAssertEqual(
-            items.map(\.id),
-            [
+        #expect(
+            items.map(\.id) == [
                 .foo,
                 .bar,
                 .foobar
